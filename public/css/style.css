@@ -1,0 +1,14 @@
+body {
+  margin-top: 80px;
+}
+.myimg {
+  float: left;
+  margin-right: 20px;
+}
+i.icon {
+  font-size: 2em;
+  color: yellow;
+}
+#editme,#deleteme,#delete {
+  display: inline-block!important;
+}

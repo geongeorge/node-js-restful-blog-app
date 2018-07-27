@@ -1,0 +1,13 @@
+<% include ./parts/head %>
+<%  blogs.forEach((el,index) => {
+  %>
+  <h1><%=el.title%></h1>
+  <img src="<%=el.image %>" class="ui small rounded image myimg">
+  <span><%=el.created%></span>
+  <p>
+    <%=el.body%>
+  </p>
+  <a href="/blogs/<%=el._id%>" class="ui primary button">Read More</a>
+  <div class="ui divider"></div>
+<% })%>
+<% include ./parts/foot %>

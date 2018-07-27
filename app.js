@@ -4,7 +4,7 @@ var express = require('express'),
     mongoose = require("mongoose"),
     bodyParser = require("body-parser"),
     app = express();
-
+const PORT = process.env.PORT;
 mongoose.connect("mongodb://localhost/my_blog");
 app.set("view engine","ejs");
 app.use(express.static('public'));
@@ -92,6 +92,6 @@ app.delete("/blogs/:id", function(req, res){
 //   body:"Shaheem and Shaheen are commonly called this term",
 //   image: "https://pixabay.com/get/ea30b50829f5023ed1584d05fb1d4e97e07ee3d21cac104496f2c470a6e4b3bd_340.jpg"
 // });
-app.listen(3000, function() {
-  console.log("Server Listening 3000")
+app.listen(PORT, function() {
+  console.log("Server Listening "+PORT)
 })
